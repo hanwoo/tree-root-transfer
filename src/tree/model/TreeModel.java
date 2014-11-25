@@ -9,15 +9,12 @@ public class TreeModel {
 	private TreeModel leftTree;
 	private TreeModel rightTree;
 	private TreeModel parentTree;
-	private boolean writeNode;
-	private boolean root;
 	
 	public TreeModel(int node) {
 		this.node = node;
 	}
 
 	public TreeModel() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public int getNode() {
@@ -46,26 +43,6 @@ public class TreeModel {
 	public void setParentTree(TreeModel parentTree) {
 		this.parentTree = parentTree;
 	}
-	public boolean isWriteNode() {
-		return writeNode;
-	}
-	public void setWriteNode(boolean writeNode) {
-		this.writeNode = writeNode;
-	}
-
-	public boolean isRoot() {
-		return root;
-	}
-
-	public void setRoot(boolean root) {
-		this.root = root;
-	}
-
-
-	public int getChoiceNode() {
-		setWriteNode(true);
-		return node;
-	}
 
 	public TreeModel getChoice(TreeModel node) {
 		TreeModel choiceTree = null;
@@ -86,19 +63,6 @@ public class TreeModel {
 					}
 				}
 				return choiceTree;
-//				if(!ObjectUtil.isNull(this.getLeftTree())) {
-//					if(this.getLeftTree().getNode() == node.getNode()) {
-//						return this.getLeftTree();
-//					} else {
-//						return this.getLeftTree().getChoice(node);
-//					}
-//				} else if(!ObjectUtil.isNull(this.getRightTree())) {
-//					if(this.getRightTree().getNode() == node.getNode()) {
-//						return this.getRightTree();
-//					} else {
-//						return this.getRightTree().getChoice(node);
-//					}
-//				}
 			}
 		} else {
 			System.out.println(node.getNode() + " is not node!");
